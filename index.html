@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="loading">
+  <div class="preloader"></div>
+  <div class="hamburger-menu" id="hamburgerMenu" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="full-img" id="fullImgBox" aria-labelledby="closeImageModal">
+    <div class="slide-container">
+      <img src="" id="fullImg" alt="Full Image View" role="img">
+    </div>
+    <span onclick="closefullImg()" aria-label="Close Image">✖</span>
+    <div class="navigation">
+      <button class="prev" onclick="changeImage(-1)" aria-label="Previous Image">&#10094;</button>
+      <button class="next" onclick="changeImage(1)" aria-label="Next Image">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="img-gallery">
+    <img src="image/img-1.jpg" alt="Image 1" onclick="openfullImg(this.src, 0)">
+    <img src="image/img-2.jpeg" alt="Image 2" onclick="openfullImg(this.src, 1)">
+    <img src="image/img-3.jpeg" alt="Image 3" onclick="openfullImg(this.src, 2)">
+    <img src="image/img-4.jpeg" alt="Image 4" onclick="openfullImg(this.src, 3)">
+    <img src="image/img-5.jpeg" alt="Image 5" onclick="openfullImg(this.src, 4)">
+    <img src="image/img-6.jpeg" alt="Image 6" onclick="openfullImg(this.src, 5)">
+    <img src="image/img-7.jpeg" alt="Image 7" onclick="openfullImg(this.src, 6)">
+    <img src="image/img-8.jpeg" alt="Image 8" onclick="openfullImg(this.src, 7)">
+  </div>
+
+  <button id="toggleThemeBtn" aria-label="Toggle Dark Mode">🌙</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
